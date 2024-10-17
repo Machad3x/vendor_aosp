@@ -233,8 +233,7 @@ PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
     NotchBarKillerOverlay \
     NetworkStackOverlay \
-    NavigationBarNoHintOverlay \
-    ThemedIconsOverlay
+    NavigationBarNoHintOverlay
 
 # TextClassifier
 PRODUCT_PACKAGES += \
@@ -254,5 +253,8 @@ include vendor/aosp/config/version.mk
 
 # OTA
 $(call inherit-product, vendor/aosp/config/ota.mk)
+
+# Themed icons
+$(call inherit-product, packages/overlays/ThemeIcons/config.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
